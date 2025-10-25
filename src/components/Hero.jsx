@@ -61,12 +61,12 @@ const Hero = () => {
         );
     });
     useEffect(() => {
-        const sentence = SplitText.create(".sentence", {
-            type: "lines",
+        const main = SplitText.create(".main-title", {
+            type: "letters",
         });
         const tl = gsap.timeline();
         tl.fromTo(
-            sentence.lines,
+            main.letters,
             { yPercent: 50, opacity: 0 },
             {
                 yPercent: 0,
@@ -92,7 +92,7 @@ const Hero = () => {
 
     return (
         <>
-            <div id="hero">
+            <div id="hero" className="scroll-mt-20">
                 <div className="info">
                     <p>
                         <span className="welcoming">Hey, I am Moh</span>

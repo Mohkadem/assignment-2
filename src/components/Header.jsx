@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { headerLinks } from "../../constants";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
     const [glassy, setGlassy] = useState(false);
@@ -52,18 +53,20 @@ const Header = () => {
     }, [glassy]);
 
     return (
-        <nav id="main" className="fixed top-0 left-0 w-full z-50 p-4 ">
+        // className="fixed top-0 left-0 w-full z-50 p-4 "
+        <nav id="main">
             <div className="flex justify-between items-center">
                 <span className="title">Portfolio</span>
                 <ul className="flex gap-6">
                     {headerLinks.map((e) => (
                         <li className="nav-links">
-                            <a key={e.id} href="#hero">
+                            <a key={e.id} href={`#${e.id}`}>
                                 {e.title}
                             </a>
                         </li>
                     ))}
                 </ul>
+                <ThemeToggle />
             </div>
         </nav>
     );

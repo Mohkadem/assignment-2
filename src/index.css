@@ -8,15 +8,16 @@
 html,
 body {
     width: 100%;
-    background-color: #121212;
     /* background-color: ; */
-    color: white;
     font-family: "SUSE Mono", sans-serif;
     font-size: 20px;
 }
-
 body::selection {
     color: #facc15;
+}
+.dark {
+    background-color: #121212;
+    color: white;
 }
 /* Utilities to avoid repetitive code */
 @utility flex-center {
@@ -32,13 +33,13 @@ body::selection {
 /* Layer components */
 @layer components {
     nav {
-        @apply flex-center sticky top-1;
+        @apply flex-center sticky top-1 z-50 h-16;
     }
     span.welcoming {
         @apply font-extrabold;
     }
     span.main-title {
-        @apply text-6xl;
+        @apply text-4xl md:text-6xl;
     }
     nav div {
         @apply flex-between flex-col py-2 px-5 container mx-auto md:flex-row md:p-6 lg:px-8;
@@ -53,7 +54,7 @@ body::selection {
         @apply hover:cursor-pointer;
     }
     #hero {
-        @apply relative mt-[120px] md:mt-[130px] h-[calc(100vh-120px)] overflow-hidden;
+        @apply relative  mt-[40px] h-[calc(100vh-120px)] overflow-hidden;
     }
     #hero .info {
         @apply ml-[3rem] flex justify-start w-[90%];
@@ -92,10 +93,28 @@ body::selection {
     .cloud-left {
         @apply h-[250px] w-[250px];
     }
-    .cloud-right {
+    /* .cloud-right {
         @apply absolute -right-10;
     }
     .cloud-left {
         @apply absolute -left-15 bottom-28;
+    } */
+    .cards {
+        @apply grid grid-cols-3 gap-4;
+    }
+    .card {
+        @apply flex flex-col justify-center items-center bg-neutral-700 text-white w-[250px] h-[250px];
+    }
+    .buttons {
+        @apply flex justify-around w-[60%] mx-auto my-10;
+    }
+    .button {
+        @apply bg-transparent border border-white p-2 rounded-[10px] cursor-pointer;
+    }
+    .work {
+        @apply flex flex-col items-center;
+    }
+    .search {
+        @apply mb-4;
     }
 }

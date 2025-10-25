@@ -32,7 +32,7 @@ const AnimatedText = () => {
         <div className="text-center md:text-start">
             <h1 className="text-white mb-6">
                 {currentText}
-                <span className="inline-block h-1.5 md:h-3 w-0.5 bg-white animate-pulse ml-2"></span>
+                <span className="inline-block h-3  w-0.5 bg-white animate-pulse ml-2"></span>
             </h1>
         </div>
     );
