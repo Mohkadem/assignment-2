@@ -1,12 +1,15 @@
 // Components
 import Header from "./components/Header";
+import Hero from "./components/Hero";
 // Style
 import "./index.css";
+// Main code
 const App = () => {
     return (
         <>
             <Header />
-            <div className="w-full h-[2000px] "></div>
+            <Hero />
+            {/* <div>hello</div> */}
         </>
     );
 };

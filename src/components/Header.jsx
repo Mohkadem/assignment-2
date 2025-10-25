@@ -6,20 +6,21 @@ import { useGSAP } from "@gsap/react";
 const Header = () => {
     const [glassy, setGlassy] = useState(false);
     // Animate elements in the header
-    useEffect(() => {
-        const tl = gsap.timeline();
-        tl.fromTo(
-            ".nav-links",
-            { y: -30, opacity: 0 },
-            {
-                y: 0,
-                opacity: 1,
-                stagger: 0.1,
-                duration: 0.6,
-                ease: "power2.out",
-            }
-        );
-    }, []);
+    // useEffect(() => {
+    //     const tl = gsap.timeline();
+    //     tl.fromTo(
+    //         ".nav-links",
+    //         { y: 50, opacity: 0 },
+    //         {
+    //             y: 0,
+    //             opacity: 1,
+    //             stagger: 0.1,
+    //             duration: 0.6,
+    //             delay: 1,
+    //             ease: "power2.out",
+    //         }
+    //     );
+    // }, []);
     // Listen to scroll changes once
     useEffect(() => {
         const handleGlassy = () => {
@@ -51,13 +52,15 @@ const Header = () => {
     }, [glassy]);
 
     return (
-        <nav id="main" className="fixed top-0 left-0 w-full z-50 p-4">
+        <nav id="main" className="fixed top-0 left-0 w-full z-50 p-4 ">
             <div className="flex justify-between items-center">
-                <span>Portfolio</span>
+                <span className="title">Portfolio</span>
                 <ul className="flex gap-6">
                     {headerLinks.map((e) => (
-                        <li key={e.id} className="nav-links">
-                            {e.title}
+                        <li className="nav-links">
+                            <a key={e.id} href="#hero">
+                                {e.title}
+                            </a>
                         </li>
                     ))}
                 </ul>

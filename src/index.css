@@ -9,10 +9,12 @@ html,
 body {
     width: 100%;
     background-color: #121212;
+    /* background-color: ; */
     color: white;
     font-family: "SUSE Mono", sans-serif;
     font-size: 20px;
 }
+
 body::selection {
     color: #facc15;
 }
@@ -23,20 +25,74 @@ body::selection {
 @utility flex-between {
     @apply flex justify-between items-center;
 }
+@utility abs-center {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+}
+
+/* Layer components */
 @layer components {
     nav {
         @apply flex-center sticky top-1;
     }
-    span {
+    span.welcoming {
         @apply font-extrabold;
     }
     nav div {
         @apply flex-between flex-col py-2 px-5 container mx-auto md:flex-row md:p-6 lg:px-8;
+    }
+    nav .title {
+        @apply font-extrabold text-2xl;
     }
     nav div ul {
         @apply flex-between gap-5;
     }
     nav div ul li {
         @apply hover:cursor-pointer;
+    }
+    #hero {
+        @apply relative mt-[120px] md:mt-[130px] h-[calc(100vh-120px)] overflow-hidden;
+    }
+    #hero .info {
+        @apply ml-[3rem] flex justify-start w-[90%];
+    }
+    #hero p {
+        @apply max-w-[600px];
+    }
+    #hero span.welcoming {
+        /* @apply mb-3; */
+    }
+    #hero span.sentence {
+        @apply text-6xl;
+    }
+    .circles {
+        @apply relative top-10 left-0 bg-purple-400 h-[500px] w-[500px];
+    }
+    .circle-1 {
+        @apply w-[450px] h-[450px] border border-white rounded-full absolute right-5 bottom-5 z-1;
+    }
+    .circle-2 {
+        @apply w-[350px] h-[350px] border border-white rounded-full abs-center z-1;
+    }
+    .circle-3 {
+        @apply w-[250px] h-[250px] border border-white rounded-full abs-center z-1;
+    }
+    .react {
+        @apply absolute left-15 top-10;
+    }
+    .image {
+        @apply h-[300px] w-[300px] abs-center z-10;
+    }
+    .box {
+        @apply w-52 h-52 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl absolute bottom-20 left-10 flex flex-col justify-center items-center;
+    }
+    .cloud-right,
+    .cloud-left {
+        @apply h-[250px] w-[250px];
+    }
+    .cloud-right {
+        @apply absolute -right-10;
+    }
+    .cloud-left {
+        @apply absolute -left-15 bottom-28;
     }
 }
