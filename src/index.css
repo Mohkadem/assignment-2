@@ -12,6 +12,12 @@ body {
     font-family: "SUSE Mono", sans-serif;
     font-size: 20px;
 }
+html {
+    scroll-behavior: smooth;
+}
+body {
+    overflow-x: hidden;
+}
 body::selection {
     @apply text-blue-800;
 }

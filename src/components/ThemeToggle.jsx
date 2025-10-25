@@ -2,17 +2,15 @@ import { useState, useEffect } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 
 const ThemeToggle = () => {
-    const [theme, setTheme] = useState("dark"); // default theme
+    // Initialize with saved theme or default to dark
+    const [theme, setTheme] = useState(() => {
+        return localStorage.getItem("theme") || "dark";
+    });
 
-    // Load theme from localStorage on mount
+    // Apply theme class to body whenever it changes
     useEffect(() => {
-        const savedTheme = localStorage.getItem("theme");
-        if (savedTheme) setTheme(savedTheme);
-    }, []);
-
-    // Apply theme class to body and save to localStorage
-    useEffect(() => {
-        document.body.className = theme === "dark" ? "dark" : "light";
+        document.body.classList.remove("light", "dark");
+        document.body.classList.add(theme);
         localStorage.setItem("theme", theme);
     }, [theme]);
 
@@ -23,7 +21,7 @@ const ThemeToggle = () => {
     return (
         <button
             onClick={toggleTheme}
-            className="flex items-center gap-2 px-4 py-2 rounded  text-black dark:text-white"
+            className="flex items-center gap-2 px-4 py-2 rounded text-black dark:text-white"
         >
             {theme === "light" ? <FaMoon size={20} /> : <FaSun size={20} />}
             {theme === "light" ? "Dark Mode" : "Light Mode"}

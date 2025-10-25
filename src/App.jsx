@@ -9,13 +9,13 @@ import "./index.css";
 // Main code
 const App = () => {
     return (
-        <>
+        <div>
             <Header />
             <Hero />
             <Work />
             <Steps />
             <Contact />
-        </>
+        </div>
     );
 };
 
