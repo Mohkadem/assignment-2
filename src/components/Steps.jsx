@@ -2,7 +2,7 @@ import { stepsCard } from "../../constants/index";
 
 const Steps = () => {
     return (
-        <section id="steps" className="mt-20 scroll-mt-20">
+        <section id="steps" className="mt-20 scroll-mt-20 overflow-hidden">
             <div className="w-full md:px-20 px-5">
                 <h2 className="text-3xl font-bold text-center">
                     Precise Steps Toward The End

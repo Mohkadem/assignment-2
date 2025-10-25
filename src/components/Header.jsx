@@ -54,7 +54,7 @@ const Header = () => {
 
     return (
         // className="fixed top-0 left-0 w-full z-50 p-4 "
-        <nav id="main">
+        <nav id="main" className="mt-4">
             <div className="flex justify-between items-center">
                 <span className="title">Portfolio</span>
                 <ul className="flex gap-6">
@@ -65,8 +65,8 @@ const Header = () => {
                             </a>
                         </li>
                     ))}
+                    <ThemeToggle />
                 </ul>
-                <ThemeToggle />
             </div>
         </nav>
     );

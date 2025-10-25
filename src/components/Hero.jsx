@@ -94,12 +94,12 @@ const Hero = () => {
         <>
             <div id="hero" className="scroll-mt-20">
                 <div className="info">
-                    <p>
+                    <div className="wrapper">
                         <span className="welcoming">Hey, I am Moh</span>
                         <br />
                         <span className="main-title">Web Developer</span>
-                        <AnimatedText />
-                    </p>
+                        <AnimatedText className="animated-text" />
+                    </div>
                 </div>
                 {/* <div className="box">
                     <p>

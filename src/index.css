@@ -13,7 +13,7 @@ body {
     font-size: 20px;
 }
 body::selection {
-    color: #facc15;
+    @apply text-blue-800;
 }
 .dark {
     background-color: #121212;
@@ -67,6 +67,9 @@ body::selection {
     }
     #hero span.sentence {
         @apply text-6xl;
+    }
+    #hero .wrapper {
+        @apply flex flex-col  items-start;
     }
     .circles {
         @apply relative top-10 left-0 bg-purple-400 h-[500px] w-[500px];
