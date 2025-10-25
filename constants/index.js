@@ -1,3 +1,4 @@
+import { FaPencilRuler, FaCode, FaRocket } from "react-icons/fa";
 export const headerLinks = [
     {
         id: "hero",
@@ -9,8 +10,8 @@ export const headerLinks = [
         title: "Work",
     },
     {
-        id: "experience",
-        title: "Experience",
+        id: "steps",
+        title: "Steps",
     },
     {
         id: "contact",
@@ -48,4 +49,39 @@ export const buttons = [
     { id: 2, title: "UI/UX" },
     { id: 3, title: "Web" },
     { id: 4, title: "React JS" },
+];
+export const stepsCard = [
+    {
+        title: "1️⃣ Planning & Design",
+        disc: "Define project goals, target audience, and design layout using wireframes and mockups.",
+        icon: FaPencilRuler,
+        days: "Days 1–3",
+        responsibility: [
+            "Gather requirements and create site map",
+            "Design wireframes and UI mockups",
+            "Choose color palette, fonts, and branding",
+        ],
+    },
+    {
+        title: "2️⃣ Development & Integration",
+        disc: "Turn designs into code and implement functionality using modern web technologies.",
+        icon: FaCode,
+        days: "Days 4–8",
+        responsibility: [
+            "Build responsive layout using HTML, CSS (TailwindCSS)",
+            "Add interactivity with JavaScript/React",
+            "Integrate APIs or CMS if needed",
+        ],
+    },
+    {
+        title: "3️⃣ Testing & Deployment",
+        disc: "Test the website for performance and deploy it to production.",
+        icon: FaRocket,
+        days: "Days 9–10",
+        responsibility: [
+            "Run usability and performance tests",
+            "Fix bugs and optimize assets",
+            "Deploy website using Vercel or Netlify",
+        ],
+    },
 ];

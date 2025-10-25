@@ -50,6 +50,7 @@ const Work = () => {
                                 key={e.id}
                                 title={e.title}
                                 disc={e.disc || "Amazing project"}
+                                className="bg-gray-100 dark:bg-gray-800"
                             />
                         ))
                     ) : (
