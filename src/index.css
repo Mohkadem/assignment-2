@@ -37,6 +37,9 @@ body::selection {
     span.welcoming {
         @apply font-extrabold;
     }
+    span.main-title {
+        @apply text-6xl;
+    }
     nav div {
         @apply flex-between flex-col py-2 px-5 container mx-auto md:flex-row md:p-6 lg:px-8;
     }

@@ -97,6 +97,7 @@ const Hero = () => {
                     <p>
                         <span className="welcoming">Hey, I am Moh</span>
                         <br />
+                        <span className="main-title">Web Developer</span>
                         <AnimatedText />
                     </p>
                 </div>
